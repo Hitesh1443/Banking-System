@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express"),
   app = express(),
   bodyParser = require("body-parser"),
@@ -11,7 +12,7 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 
-mongoose.connect("mongodb://localhost/Banking_System" || process.env.MONGO_ATLAS, { useNewUrlParser: true, useUnifiedTopology: true, autoIndex: false });
+mongoose.connect(process.env.MONGO_ATLAS, { useNewUrlParser: true, useUnifiedTopology: true, autoIndex: false });
 
 app.get("/", function (req, res) {
   mongoose.connection.db.collection("users").countDocuments(function (err, count) {

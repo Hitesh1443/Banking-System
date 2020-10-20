@@ -1,0 +1,56 @@
+h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 5rem;
+  text-align: center;
+}
+
+.button {
+  margin: 10px auto;
+  display: block;
+  width: 60%;
+}
+
+.container {
+  max-width: 400px;
+}
+
+a {
+  color: aliceblue;
+}
+
+.back {
+  color: #0056b3;
+}
+
+input {
+  max-width: 100%;
+}
+
+.t {
+  padding-left: 0%;
+  padding-right: 0%;
+}
+
+.outline {
+  border-radius: 25px;
+  border: 2px solid black;
+  padding: 20px;
+}
+
+table,
+th,
+td {
+  border: 2px solid black;
+}
+
+.abc {
+  margin-top: 10px;
+}
+
+.Home {
+  text-align: center;
+}
+
+.col-6 {
+  margin: 10px auto;
+}

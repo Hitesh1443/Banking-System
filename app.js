@@ -12,7 +12,7 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 
-mongoose.connect(process.env.MONGO_ATLAS, { useNewUrlParser: true, useUnifiedTopology: true, autoIndex: false });
+mongoose.connect(process.env.MONGO_ATLAS || "mongodb://localhost/Banking_System", { useNewUrlParser: true, useUnifiedTopology: true, autoIndex: false });
 
 app.get("/", function (req, res) {
   mongoose.connection.db.collection("users").countDocuments(function (err, count) {

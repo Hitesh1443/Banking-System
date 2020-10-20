@@ -87,8 +87,8 @@ app.post("/transfer/:id", function (req, res) {
             const date = new Date();
             const new_date = moment(date).format("DD/MM/YYYY");
             const transact = new Transaction({
-              payer: payee.name,
-              receiver: foundUser.name,
+              payer: foundUser.name,
+              receiver: payee.name,
               amount: Number(req.body.amount),
               date: new_date,
             });
